@@ -16,8 +16,8 @@ d3.csv("data/player_stats.csv").then(function(data) {
         d.TRB = +d.TRB;
     });
 
-    x.domain(d3.extent(data, function(d) { return d.MP; })).nice();
-    y.domain(d3.extent(data, function(d) { return d.TRB; })).nice();
+    // x.domain(d3.extent(data, function(d) { return d.MP; })).nice();
+    // y.domain(d3.extent(data, function(d) { return d.TRB; })).nice();
 
     var tooltip = d3.select("body")
                     .append("div")
