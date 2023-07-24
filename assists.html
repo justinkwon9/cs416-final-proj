@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>  
+<title>CS416 Final Project - Justin Kwon</title>
+</head>
+<style>
+    body {
+    width: 100vw;
+    margin: 25px auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+
+    .tooltip {
+        position: absolute;
+        text-align: center;
+        width: 200px;
+        height: auto;
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+
+    .axis path,
+    .axis line {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2px;
+    shape-rendering: crispEdges;
+}
+</style>
+
+<body>
+    <div class="jumbotron" style="background-color: #244289; color: #FFFFFF" aligncenter>
+        <h1 style="padding-left : 2%">Jokic's greatest strength: setting up his teammates</h1>
+    </div>
+    <p style="padding-left : 2%">The scatterplot maps "minutes played per game" (MPG) on the x-axis vs "assists per game" (APG) on the y-axis. 
+        Jokic is denoted by the red point. You can mouseover a point to see more details about the player. 
+        Centers are not generally not known for their court vision and ability to assist their teammates. 
+        However, this is Jokic's greatest strength that makes him one-of-a-kind in his position.</p>
+      
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="d3/all_assists.js"></script>
+
+    <div aligncenter>
+        <h3>What can we see from this chart?</h3>
+        <p style="padding-left : 2%">Jokic has the 4th highest assists per game in the league. We've seen Jokic at the top of the league in points, rebounds AND assists! He is 0.2 assists per game away from 
+        averaging a triple double for the season which is incredible. Jokic's ability to not only score but set up his teammates for success with his great court vision 
+        and playmaking skills makes him one of the biggest offensive threats in the league. 
+        Let's now take a look at how his playmaking abilities compare to other centers in the <a href="center_assists.html">next slide!</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>  
+<title>CS416 Final Project - Justin Kwon</title>
+</head>
+<style>
+    body {
+    width: 100vw;
+    margin: 25px auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+
+    .tooltip {
+        position: absolute;
+        text-align: center;
+        width: 200px;
+        height: auto;
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+
+    .axis path,
+    .axis line {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2px;
+    shape-rendering: crispEdges;
+}
+</style>
+
+<body>
+    <div class="jumbotron" style="background-color: #244289; color: #FFFFFF" aligncenter>
+        <h1 style="padding-left : 2%">How does Jokic fare against other centers?</h1>
+    </div>
+    <p style="padding-left : 2%">The scatterplot maps "minutes played per game" (MPG) on the x-axis vs "points per game" (PPG) on the y-axis but is filtered by players that are centers. 
+        Jokic is denoted by the red point. You can mouseover a point to see more details about the player.</p>
+      
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="d3/center_points.js"></script>
+
+    <div aligncenter>
+       <h3>What can we see from this chart?</h3>
+       <p style="padding-left : 2%">Jokic is the 3rd best scoring center in the league. Joel Embiid's stats are phenomenal, but Jokic is a more efficient scorer averaging 6 fewer field goal attempts per game 
+        with an effective field goal % of 66.0% vs Embiid's 57.3%. Jokic has also played over 10 more games than Anthony Davis who is ranked 2nd. 
+        We've established that Jokic is not only one of the best scoring centers, but one of the best scorers in the league. 
+        Now let's take a look at another important stat: <a href="rebounds.html">Rebounds!</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>  
+<title>CS416 Final Project - Justin Kwon</title>
+</head>
+<style>
+    body {
+    width: 100vw;
+    margin: 25px auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+
+    .tooltip {
+        position: absolute;
+        text-align: center;
+        width: 200px;
+        height: auto;
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+
+    .axis path,
+    .axis line {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2px;
+    shape-rendering: crispEdges;
+}
+</style>
+
+<body>
+    <div class="jumbotron" style="background-color: #244289; color: #FFFFFF" aligncenter>
+        <h1 style="padding-left : 2%">Is Jokic a good rebounder?</h1>
+    </div>
+    <p style="padding-left : 2%">The scatterplot maps "minutes played per game" (MPG) on the x-axis vs "rebounds per game" (RPG) on the y-axis. 
+        Jokic is denoted by the red point. You can mouseover a point to see more details about the player. 
+        Centers are generally good rebounders due to their height advantage. Let's see if this is true for Jokic as well.</p>
+      
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="d3/rebounds.js"></script>
+
+    <div aligncenter>
+        <h3>What can we see from this chart?</h3>
+        <p style="padding-left : 2%">Jokic is the 4th best rebounder in the league. Not only is he one of the best scorers in the league, he is also one of the best rebounders in the league. 
+        Jokic's ability to impact the game at multiple fronts makes him one of the best players in the NBA.
+        Now let's take a look at what truly makes Jokic's game so special: <a href="assists.html">Assists!</a></p>
+    </div>
+</body>
+</html>
