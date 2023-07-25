@@ -32,8 +32,8 @@ d3.csv("data/player_stats.csv").then(function(data) {
             .duration(200)
             .style("opacity", 1)
         tooltip.html(tipcontent)
-            .style("left",  (d3.pointer(event)[0] + 25) + "px")
-            .style("top", (d3.pointer(event)[1]) + "px")
+            .style("left",  (d3.pointer(event)[0] + 10) + "px")
+            .style("top", (d3.pointer(event)[1] - 1) + "px")
         };
     // tooltip mouseout
     var tipMouseout = function(d) {
