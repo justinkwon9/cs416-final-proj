@@ -25,15 +25,15 @@ d3.csv("data/player_stats.csv").then(function(data) {
                     .style("opacity", 0.05);
 
     // tooltip mouseover
-    var tipMouseover = function(d) {
+    var tipMouseover = function(event, d) {
         var tipcontent  = "Player Name : " + d.Player + "<br/>Team: " + d.Tm + "<br/>Position: " + d.Pos +
                             "<br/>Assists: " + d.AST + "<br/>MPG: " + d.MP;
         tooltip.transition()
             .duration(200)
-            .style("opacity", 0)
+            .style("opacity", 1)
         tooltip.html(tipcontent)
-            .style("left",  (d3.event.pageX + 25) + "px") // or d3.pointer(event)[0]
-            .style("top", (d3.event.pageY - 25) + "px") // or d3.pointer(event)[1]
+            .style("left",  (d3.pointer(event)[0] + 10) + "px") // or d3.pointer(event)[0]
+            .style("top", (d3.pointer(event)[1] - 3) + "px") // or d3.pointer(event)[1]
         };
     // tooltip mouseout
     var tipMouseout = function(d) {
