@@ -30,7 +30,7 @@ d3.csv("data/center_stats.csv").then(function(data) {
                             "<br/>Points: " + d.PTS + "<br/>MPG: " + d.MP;
         tooltip.transition()
             .duration(200)
-            .style("opacity", 0)
+            .style("opacity", 1)
         tooltip.html(tipcontent)
             .style("left",  (d3.event.pageX + 25) + "px") // or d3.pointer(event)[0]
             .style("top", (d3.event.pageY - 25) + "px") // or d3.pointer(event)[1]
