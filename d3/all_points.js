@@ -22,7 +22,7 @@ d3.csv("data/player_stats.csv").then(function(data) {
     var tooltip = d3.select("body")
                     .append("div")
                     .attr("class", "tooltip")
-                    .style("opacity", 0.05);
+                    .style("opacity", 0);
 
     // tooltip mouseover
     var tipMouseover = function(event, d) {
@@ -33,7 +33,7 @@ d3.csv("data/player_stats.csv").then(function(data) {
             .style("opacity", 1)
         tooltip.html(tipcontent)
             .style("left",  (d3.pointer(event)[0] + 25) + "px")
-            .style("top", (d3.pointer(event)[1] - 25) + "px")
+            .style("top", (d3.pointer(event)[1] - 5) + "px")
             //.style("left",  (d3.event.pageX + 25) + "px") // or d3.pointer(event)[0]
             //.style("top", (d3.event.pageY - 25) + "px") // or d3.pointer(event)[1]
         };
