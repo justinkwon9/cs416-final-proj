@@ -70,7 +70,7 @@ d3.csv("data/player_stats.csv").then(function(data) {
         .data(data)
         .join("circle")
         .attr("cx", d => x(d.MP))
-        .attr("cy", d => y(d.PTS))
+        .attr("cy", d => y(d.TRB))
         .attr("r", 3.5)
         .attr("fill", d => d.Player === "Nikola Jokic" ? "red" : "steelblue")
         .attr("stroke", "steelblue")
