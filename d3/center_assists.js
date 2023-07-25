@@ -70,7 +70,7 @@ d3.csv("data/center_stats.csv").then(function(data) {
         .data(data)
         .join("circle")
         .attr("cx", d => x(d.MP))
-        .attr("cy", d => y(d.PTS))
+        .attr("cy", d => y(d.AST))
         .attr("r", 3.5)
         .attr("fill", d => d.Player === "Nikola Jokic" ? "red" : "steelblue")
         .attr("stroke", "steelblue")
@@ -83,7 +83,7 @@ d3.csv("data/center_stats.csv").then(function(data) {
     if (jokic) {
         svg.append("text")
            .attr("x", x(jokic.MP))
-           .attr("y", y(jokic.PTS) - 10) // position the text 10px above the data point
+           .attr("y", y(jokic.AST) - 10) // position the text 10px above the data point
            .text("Jokic is the best playmaking center")
            .attr("font-size", "12px")
            .attr("text-anchor", "middle");
