@@ -22,18 +22,18 @@ d3.csv("data/center_stats.csv").then(function(data) {
     var tooltip = d3.select("body")
                     .append("div")
                     .attr("class", "tooltip")
-                    .style("opacity", 0.05);
+                    .style("opacity", 0);
 
     // tooltip mouseover
-    var tipMouseover = function(d) {
+    var tipMouseover = function(event, d) {
         var tipcontent  = "Player Name : " + d.Player + "<br/>Team: " + d.Tm + "<br/>Position: " + d.Pos +
                             "<br/>Assists: " + d.AST + "<br/>MPG: " + d.MP;
         tooltip.transition()
             .duration(200)
             .style("opacity", 0)
         tooltip.html(tipcontent)
-            .style("left",  (d3.event.pageX + 25) + "px") // or d3.pointer(event)[0]
-            .style("top", (d3.event.pageY - 25) + "px") // or d3.pointer(event)[1]
+            .style("left",  (d3.pointer(event)[0] + 5) + "px") // or d3.pointer(event)[0]
+            .style("top", (d3.pointer(event)[1] - 4) + "px") // or d3.pointer(event)[1]
         };
     // tooltip mouseout
     var tipMouseout = function(d) {
