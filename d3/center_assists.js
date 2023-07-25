@@ -30,7 +30,7 @@ d3.csv("data/center_stats.csv").then(function(data) {
                             "<br/>Assists: " + d.AST + "<br/>MPG: " + d.MP;
         tooltip.transition()
             .duration(200)
-            .style("opacity", 0)
+            .style("opacity", 1)
         tooltip.html(tipcontent)
             .style("left",  (d3.pointer(event)[0] + 5) + "px") // or d3.pointer(event)[0]
             .style("top", (d3.pointer(event)[1] - 4) + "px") // or d3.pointer(event)[1]
